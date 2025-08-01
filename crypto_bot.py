@@ -87,8 +87,10 @@ def handle_confirm_stars(update: Update, context: CallbackContext):
         chat_id=ADMIN_ID,
         text=f"⚠️ Запрос подтверждения!\nПользователь {username} отправил звёзды?",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("✅ Да", callback_data=f"stars_yes:{user_id}"),
-            [InlineKeyboardButton("❌ Нет", callback_data=f"stars_no:{user_id}")]
+            [
+                InlineKeyboardButton("✅ Да", callback_data=f"stars_yes:{user_id}"),
+                InlineKeyboardButton("❌ Нет", callback_data=f"stars_no:{user_id}")
+            ]
         ])
     )
     
